@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./resources/homeTemplete.xhtml">
+
+            <ui:define name="top">
+                <div id="t1">
+                    <h1 id="h">Senhati Union Porishad</h1><br></br>
+                    <h1 id="h2">Union Management System</h1>
+                </div>
+                <h:form style="width:100%;" id="fm">
+                    
+                    <div id="t2">
+                        <p:menubar id="m1" style="background-color: darkslategray">
+                            <p:submenu label="File" >
+                                <p:menuitem value="Back Up" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Restore File" style="background-color: black"></p:menuitem>
+                                <p:separator/>
+                                <p:menuitem value="Exit" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+                            <p:submenu label="Maintain">
+                                <p:menuitem value="Master Data Citizen" url="addCitizenMaster.xhtml" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Govement Allotment" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Designation Bank" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Grade/Scale Information" style="background-color: black"></p:menuitem>
+                               
+                                <p:separator/>
+                                <p:menuitem value="Master Items Globally Change" style="background-color: black"></p:menuitem>
+                                
+                            </p:submenu>
+                            <p:submenu label="Help">
+                                <p:menuitem value="About JournalDev" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Contact Us" style="background-color: black"></p:menuitem>
+                                <p:separator/>
+                                <p:menuitem value="Help" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+                        </p:menubar>
+                    </div>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="left">
+                left
+            </ui:define>
+
+            <ui:define name="content">
+                content
+            </ui:define>
+
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+        <ui:composition template="./resources/homeTemplete.xhtml">
+            <ui:define name="top">
+                <div id="t1">
+                    <h1 id="h">Senhati Union Porishad</h1><br></br>
+                    <h1 id="h2">Union Management System</h1>
+                </div>
+                <h:form style="width:100%;" id="fm">
+                    <div id="t2">
+                        <p:menubar id="m1" style="background-color: darkslategray" autoDisplay="true">
+                            <p:submenu label="File" >
+                                <p:menuitem value="Home Page" url="index.xhtml" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Back Up" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Restore File" style="background-color: black"></p:menuitem>
+                                <p:separator/>
+                                <p:menuitem value="Exit" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+                            <p:submenu label="Maintain">
+                                <p:menuitem value="Citizen's Master Data" url="addCitizenMaster.xhtml" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Govt. Allotment Category" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Non-Govt. Allotment Category" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Cabinet's Master Data" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Stuff's Master Data" style="background-color: black"></p:menuitem>
+                                <p:separator/>
+                                <p:menuitem value="Master Items Globally Change" style="background-color: black"></p:menuitem>
+
+                            </p:submenu>
+                            <p:submenu label="Union Accounce">
+                                <p:menuitem value="Union Balance Sheet" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Total Income" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Total Expenditure" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+
+                            <p:submenu label="Government Allotment">
+                                <p:menuitem value="Allocation List" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Allotment Receiver" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+                            <p:submenu label="Non-Government Allotment">
+                                <p:menuitem value="Allotment Category" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Allocation List" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Allotment Receiver" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+                            <p:submenu label="Porishad Service">
+                                <p:menuitem value="On-line Birth Certificate" url="birthCertificateShow.xhtml" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Character Certificate" url="characterCertificateShow.xhtml" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Citizenship Certificate" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="On-line Death Certificate" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Character Certificate" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Trade Lisence" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+                            <p:submenu label="Various Report">
+                                <p:menuitem value="Total Citizen Summary" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Total Vo" style="background-color: black"></p:menuitem>
+                                <p:separator/>
+                                <p:separator/>
+                                <p:menuitem value="Help" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+
+                            <p:submenu label="Help">
+                                <p:menuitem value="About Senhati Union Porishad" style="background-color: black"></p:menuitem>
+                                <p:menuitem value="Contact Us" style="background-color: black"></p:menuitem>
+                                <p:separator/>
+                                <p:separator/>
+                                <p:menuitem value="Help" style="background-color: black"></p:menuitem>
+                            </p:submenu>
+
+                        </p:menubar>
+                    </div>
+                </h:form>
+            </ui:define>
+            <ui:define name="left">
+                <h1>Important Link</h1>
+                <ul id="link">
+                    <li><a href="http://www.cabinet.gov.bd/" target="_blank">All Ministry</a></li>
+                    <li><a href="https://bn.wikipedia.org/wiki/" target="_blank">Bangla Wikipedia</a></li>
+                    <li><a href="https://www.wikipedia.org/" target="_blank">English Wikipedia</a></li>
+                    <li><a href="https://www.google.com" target="_blank">Google Search</a></li>
+                    <li><a href="https://www.google.com" target="_blank">Google Search</a></li>
+                    <li><a href="https://www.google.com" target="_blank">Google Search</a></li>
+                    <li><a href="https://www.google.com" target="_blank">Google Search</a></li>
+                    <li><a href="https://www.google.com" target="_blank">Google Search</a></li>
+                    <br/>
+                    <li><a href="http://উত্তরাধিকার.বাংলা/" target="_blank">Property Calculator</a></li>
+                    <li><a href="http://www.calculator.net/age-calculator.html" target="_blank">Age Calculator</a></li>
+                    <li><a href="http://www.bangladesh.gov.bd/" target="_blank">National Information</a></li>
+                    <li><a href="http://www.english-bangla.com/" target="_blank">Online Dictonary(All)</a></li>
+                </ul>
+            </ui:define>
+            <ui:define name="content">
+                <h:body>
+                    <h:body>
+                        <h:form id="citiform">
+                            <p:messages id ="msg1" closable="true" showDetail="true"></p:messages>
+                            <h1>Citizen Master Data Entry Form</h1>
+                            <p:panelGrid columns="4">
+                                <h:outputLabel value="citiId"></h:outputLabel>
+                                <p:inputText></p:inputText>
+                                <h:outputLabel></h:outputLabel>
+                                <h:outputLabel></h:outputLabel>
+                                
+                                <h:outputLabel value="citiName"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiName}"></p:inputText>
+                                <h:outputLabel value="citiFather"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiFather}"></p:inputText>
+                                <h:outputLabel value="citiMother"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiMother}"></p:inputText>
+                                <h:outputLabel value="citiNid"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiNid}"></p:inputText>
+                                <h:outputLabel value="citiVillage"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiVillage}"></p:inputText>
+                                <h:outputLabel value="citiPostoff"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiPostoff}"></p:inputText>
+                                <h:outputLabel value="citiWard"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiWard}"></p:inputText>
+                                <h:outputLabel value="citiGender"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiGender}"></p:inputText>
+                                <h:outputLabel value="citiMStatus"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiMStatus}"></p:inputText>
+                                <h:outputLabel value="citiFamiStatus"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiFamiStatus}"></p:inputText>
+                                <h:outputLabel value="citiFamiNumber"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiFamiNumber}"></p:inputText>
+                                <h:outputLabel value="citiOccupation"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiOccupation}"></p:inputText>
+                                <h:outputLabel value="citiFamiIncome"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiFamiIncome}"></p:inputText>
+                                <h:outputLabel value="citiBirthDate"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiBirthDate}"></p:inputText>
+                                <h:outputLabel value="citiAge"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiAge}"></p:inputText>
+                                <h:outputLabel value="citiDesignation"></h:outputLabel>
+                                <p:inputText value="#{citizenMasterMB.citizenMaster.citiDesignation}"></p:inputText>
+                                <p:commandButton action="showTable/citizenMaster.xhtml" value="Delete" style="background-color: red"></p:commandButton>
+                                <p:commandButton action="showTable/citizenMaster.xhtml" value="Show Citizen Master" ></p:commandButton>
+                                <p:commandButton action="showTable/citizenMaster.xhtml" value="Update" ></p:commandButton>
+                                <p:commandButton action="#{citizenMasterMB.addCitizenMaster()}" value="Save" update="msg1"></p:commandButton>
+                            </p:panelGrid>
+                        </h:form>
+                    </h:body>
+                </h:body>
+            </ui:define>
+            <ui:define name="bottom">
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

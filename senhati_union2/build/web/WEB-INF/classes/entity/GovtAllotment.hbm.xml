@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 31, 2018 7:40:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.GovtAllotment" table="govt_allotment" catalog="senhati_union2" optimistic-lock="version">
+        <id name="govtAllotId" type="java.lang.Integer">
+            <column name="govt_allot_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="allotCategory" class="entity.AllotCategory" fetch="select">
+            <column name="allot_id" not-null="true" />
+        </many-to-one>
+        <property name="allotName" type="string">
+            <column name="allot_name" length="45" not-null="true" />
+        </property>
+        <property name="allotCategory_1" type="string">
+            <column name="allot_category" length="45" not-null="true" />
+        </property>
+        <property name="allotUnit" type="string">
+            <column name="allot_unit" length="45" not-null="true" />
+        </property>
+        <property name="allotAmount" type="double">
+            <column name="allot_amount" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="allotQty" type="string">
+            <column name="allot_qty" length="45" not-null="true" />
+        </property>
+        <property name="allotVoucher" type="string">
+            <column name="allot_voucher" length="45" not-null="true" />
+        </property>
+        <property name="allotDate" type="date">
+            <column name="allot_date" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

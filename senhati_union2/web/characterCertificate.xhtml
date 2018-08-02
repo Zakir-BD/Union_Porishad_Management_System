@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Character Certificate</title>
+        <h:outputStylesheet name="./css/cssBirthCertificate.css"/>
+        
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="form" align="center">
+                <div id="form1" align="center">
+                    <h1>People’s Republic of Bangladesh</h1>
+                    <h4>Office of the Registrar of Birth and Death</h4>
+                    <p>Senhati Union Parishad</p>
+                    <p>Dighalia, Khulna</p>
+                    <h1>Character Certificate</h1>
+                    <h6><u>___Rule-9, of Birth and Death Registration (Union Parishad) Rules, 2006](Extract from Birth Register)___</u></h6>
+                </div>
+                <div id="form2" align="left">
+                   
+                    <h:form id="mm" >
+                        <h:panelGrid columns="5">
+                            <h:outputLabel>Date of Registration :</h:outputLabel>
+                            <h:outputText value="#{session.lastAccessedTime}"><f:convertDateTime pattern="MM/dd/yyyy" type="date" /></h:outputText>
+                            <h:outputLabel></h:outputLabel>
+                            <h:outputLabel>Date of Issue :</h:outputLabel>
+                            <h:outputText value="#{session.lastAccessedTime}"><f:convertDateTime pattern="MM/dd/yyyy" type="date" /></h:outputText>
+                        </h:panelGrid>
+                        <div id="form3">
+                            <h:panelGrid columns="2">
+                                <h:outputLabel>Registration No :</h:outputLabel>
+                                <h:outputLabel id="ac">#{birthCertificateMB.citizenMaster.citiId}#{birthCertificateMB.citizenMaster.citiNid}#{birthCertificateMB.citizenMaster.citiWard}</h:outputLabel>
+                            </h:panelGrid>
+                        </div>
+                    </h:form><br></br><br></br><br></br>
+                    <div id="form4">
+                        <h:panelGrid columns="2">
+                            <h:outputLabel>Name: </h:outputLabel>
+                            <h:outputLabel id="ad">#{birthCertificateMB.citizenMaster.citiName}</h:outputLabel>
+                            <h:outputLabel>Date of Birth: </h:outputLabel>
+                            <h:outputLabel id="ae">#{birthCertificateMB.citizenMaster.citiBirthDate}</h:outputLabel>
+                            <h:outputLabel>Sex: </h:outputLabel>
+                            <h:outputLabel id="af">#{birthCertificateMB.citizenMaster.citiGender}</h:outputLabel>
+                            <h:outputLabel>Father’s Name: </h:outputLabel>
+                            <h:outputLabel id="ag">#{birthCertificateMB.citizenMaster.citiFather}</h:outputLabel>
+                            <h:outputLabel>Father’s Nationality: </h:outputLabel>
+                            <h:outputLabel id="ah">Bangladeshi</h:outputLabel>
+                            <h:outputLabel>Mother’s Name: </h:outputLabel>
+                            <h:outputLabel id="ai">#{birthCertificateMB.citizenMaster.citiMother}</h:outputLabel>
+                            <h:outputLabel>Mother’s Nationality: </h:outputLabel>
+                            <h:outputLabel id="aj">Bangladeshi</h:outputLabel>
+                            </h:panelGrid>
+                        <h:panelGrid columns="5">
+                            <div id="form5">
+                            <h4>Place of Birth: </h4>
+                            <h:outputLabel>Village:</h:outputLabel>
+                            <h:outputLabel id="ak">#{birthCertificateMB.citizenMaster.citiVillage}</h:outputLabel>
+                            <h:outputLabel>Ward:</h:outputLabel>
+                            <h:outputLabel id="al">#{birthCertificateMB.citizenMaster.citiWard}</h:outputLabel>
+                            <h:outputLabel></h:outputLabel>
+                            <h:outputLabel>Thana:</h:outputLabel>
+                            <h:outputLabel id="am">Dighalia</h:outputLabel>
+                            <h:outputLabel>District:</h:outputLabel>
+                            <h:outputLabel id="an">Khulna</h:outputLabel>
+                            </div>
+                            <div id="form6">
+                            <h4>Permanent Address: </h4>
+                            <h:outputLabel>Village:</h:outputLabel>
+                            <h:outputLabel id="ao">#{birthCertificateMB.citizenMaster.citiVillage}</h:outputLabel>
+                            <h:outputLabel>Ward:</h:outputLabel>
+                            <h:outputLabel id="ap">#{birthCertificateMB.citizenMaster.citiWard}</h:outputLabel>
+                            <h:outputLabel></h:outputLabel>
+                            <h:outputLabel>Thana:</h:outputLabel>
+                            <h:outputLabel id="aq">Dighalia</h:outputLabel>
+                            <h:outputLabel>District:</h:outputLabel>
+                            <h:outputLabel id="ar">Khulna</h:outputLabel>
+                            
+                            </div>
+                        </h:panelGrid>
+                    </div>
+                </div>
+                <br/>
+                <div><p id="Signature1"><b>Secretary Chairman</b></p></div>
+                
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

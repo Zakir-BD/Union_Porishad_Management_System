@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 31, 2018 7:40:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.UnionSalary" table="union_salary" catalog="senhati_union2" optimistic-lock="version">
+        <id name="salId" type="java.lang.Integer">
+            <column name="sal_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="citizenMaster" class="entity.CitizenMaster" fetch="select">
+            <column name="citi_id" not-null="true" />
+        </many-to-one>
+        <property name="citiName" type="string">
+            <column name="citi_name" length="45" not-null="true" />
+        </property>
+        <property name="citiNid" type="int">
+            <column name="citi_nid" not-null="true" />
+        </property>
+        <property name="citiDesignation" type="string">
+            <column name="citi_designation" length="45" not-null="true" />
+        </property>
+        <property name="salAmount" type="double">
+            <column name="sal_amount" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Birth Certificate</title>
+        <style>
+            #birthF{
+                width: 200px;
+                height: 100px;
+                border: 2px;
+                margin: auto;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="birthF">
+            <p:panelGrid columns="2">
+                <h:outputLabel value="citi_id"></h:outputLabel>
+                <p:inputText value="#{birthCertificateMB.citizenMaster.citiId}"></p:inputText>
+                <h:outputLabel/>
+                <p:commandButton  value="Submit" action="#{birthCertificateMB.gotoLink()}"></p:commandButton>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

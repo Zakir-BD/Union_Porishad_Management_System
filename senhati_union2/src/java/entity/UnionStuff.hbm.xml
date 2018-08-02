@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 31, 2018 7:40:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.UnionStuff" table="union_stuff" catalog="senhati_union2" optimistic-lock="version">
+        <id name="stuffId" type="java.lang.Integer">
+            <column name="stuff_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="citizenMaster" class="entity.CitizenMaster" fetch="select">
+            <column name="citi_id" not-null="true" />
+        </many-to-one>
+        <property name="citiName" type="string">
+            <column name="citi_name" length="45" not-null="true" />
+        </property>
+        <property name="citiFather" type="string">
+            <column name="citi_father" length="45" not-null="true" />
+        </property>
+        <property name="citiMother" type="string">
+            <column name="citi_mother" length="45" not-null="true" />
+        </property>
+        <property name="citiNid" type="string">
+            <column name="citi_nid" length="45" not-null="true" />
+        </property>
+        <property name="citiGender" type="string">
+            <column name="citi_gender" length="45" not-null="true" />
+        </property>
+        <property name="citiBirthDate" type="date">
+            <column name="citi_birth_date" length="10" not-null="true" />
+        </property>
+        <property name="citiMStatus" type="string">
+            <column name="citi_m_status" length="45" not-null="true" />
+        </property>
+        <property name="citiAge" type="string">
+            <column name="citi_age" length="45" not-null="true" />
+        </property>
+        <property name="citiDesignation" type="string">
+            <column name="citi_designation" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

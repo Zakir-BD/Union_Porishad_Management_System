@@ -1,0 +1,43 @@
+#form {
+    border: #449d44 solid 5px;
+    margin: auto;
+    height: 600px;
+    width: 500px;
+    align-self: center;
+}
+#form1{
+    align-self: center;
+    line-height: 2px;
+}
+#form2{
+    align-self: center;
+    line-height: 2px;
+}
+#form3{
+    text-align: right;
+    line-height: 20px;
+}
+#form4{
+    align-self: center;
+    line-height: 20px;
+    margin-left: 30px;
+}
+#form5{
+    align-self: center;
+    line-height: 1px;
+
+}
+#form6{
+    align-self: center;
+    line-height: 1px;
+
+}
+#aa{
+    white-space: 400px; 
+}
+#Signature1{
+    margin-left: 30px;
+    margin-right: 30px;
+    word-spacing: 250px;
+   
+}

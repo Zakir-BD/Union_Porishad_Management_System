@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Citizen Master Table</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <p:dataTable var ="citizen" value ="#{citizenMaster.citizenmaster()}">
+                <p:column headerText="ID">
+                    <h:outputText value="#{citizen.citiId}"/>
+                </p:column>
+                <p:column headerText="Name">
+                    <h:outputText value="#{citizen.citiName}"/>
+                </p:column>
+                <p:column headerText="Father">
+                    <h:outputText value="#{citizen.citiFather}"/>
+                </p:column>
+                <p:column headerText="Mother">
+                    <h:outputText value="#{citizen.citiMother}"/>
+                </p:column>
+                <p:column headerText="Nid">
+                    <h:outputText value="#{citizen.citiNid}"/>
+                </p:column>
+                <p:column headerText="Village">
+                    <h:outputText value="#{citizen.citiVillage}"/>
+                </p:column>
+                <p:column headerText="Post office">
+                    <h:outputText value="#{citizen.citiPostoff}"/>
+                </p:column>
+                <p:column headerText="Ward">
+                    <h:outputText value="#{citizen.citiWard}"/>
+                </p:column>
+                <p:column headerText="Gender">
+                    <h:outputText value="#{citizen.citiGender}"/>
+                </p:column>
+                <p:column headerText="M.Status">
+                    <h:outputText value="#{citizen.citiMStatus}"/>
+                </p:column>
+                <p:column headerText="Family Status">
+                    <h:outputText value="#{citizen.citiFamiStatus}"/>
+                </p:column>
+                <p:column headerText="Family Number">
+                    <h:outputText value="#{citizen.citiFamiNumber}"/>
+                </p:column>
+                <!--        citi_id, citi_name, citi_father, citi_mother, citi_nid, citi_village, citi_postoff, citi_ward,
+        citi_gender, citi_m_status, citi_fami_status, citi_fami_number, citi_occupation, citi_fami_income,
+        citi_birth_date, citi_age, citi_designation-->
+                <p:column headerText="Occupation">
+                    <h:outputText value="#{citizen.citiOccupation}"/>
+                </p:column>
+                <p:column headerText="Family Income">
+                    <h:outputText value="#{citizen.citiFamiIncome}"/>
+                </p:column>
+                <p:column headerText="Birth Date">
+                    <h:outputText value="#{citizen.citiBirthDate}"/>
+                </p:column>
+                <p:column headerText="Age">
+                    <h:outputText value="#{citizen.citiAge}"/>
+                </p:column>
+                <p:column headerText="Designation">
+                    <h:outputText value="#{citizen.citiDesignation}"/>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

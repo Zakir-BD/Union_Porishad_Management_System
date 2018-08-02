@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 31, 2018 7:40:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.CitizenMaster" table="citizen_master" catalog="senhati_union2" optimistic-lock="version">
+        <id name="citiId" type="java.lang.Integer">
+            <column name="citi_id" />
+            <generator class="identity" />
+        </id>
+        <property name="citiName" type="string">
+            <column name="citi_name" length="45" not-null="true" />
+        </property>
+        <property name="citiFather" type="string">
+            <column name="citi_father" length="45" not-null="true" />
+        </property>
+        <property name="citiMother" type="string">
+            <column name="citi_mother" length="45" not-null="true" />
+        </property>
+        <property name="citiNid" type="int">
+            <column name="citi_nid" not-null="true" />
+        </property>
+        <property name="citiVillage" type="string">
+            <column name="citi_village" length="45" not-null="true" />
+        </property>
+        <property name="citiPostoff" type="string">
+            <column name="citi_postoff" length="45" not-null="true" />
+        </property>
+        <property name="citiWard" type="int">
+            <column name="citi_ward" not-null="true" />
+        </property>
+        <property name="citiGender" type="string">
+            <column name="citi_gender" length="45" not-null="true" />
+        </property>
+        <property name="citiMStatus" type="string">
+            <column name="citi_m_status" length="45" not-null="true" />
+        </property>
+        <property name="citiFamiStatus" type="string">
+            <column name="citi_fami_status" length="45" not-null="true" />
+        </property>
+        <property name="citiFamiNumber" type="int">
+            <column name="citi_fami_number" not-null="true" />
+        </property>
+        <property name="citiOccupation" type="string">
+            <column name="citi_occupation" length="45" not-null="true" />
+        </property>
+        <property name="citiFamiIncome" type="double">
+            <column name="citi_fami_income" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="citiBirthDate" type="string">
+            <column name="citi_birth_date" length="45" not-null="true" />
+        </property>
+        <property name="citiAge" type="string">
+            <column name="citi_age" length="45" not-null="true" />
+        </property>
+        <property name="citiDesignation" type="string">
+            <column name="citi_designation" length="45" not-null="true" />
+        </property>
+        <set name="unionStuffs" table="union_stuff" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="citi_id" not-null="true" />
+            </key>
+            <one-to-many class="entity.UnionStuff" />
+        </set>
+        <set name="unionCabinets" table="union_cabinet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="citi_id" not-null="true" />
+            </key>
+            <one-to-many class="entity.UnionCabinet" />
+        </set>
+        <set name="unionSalaries" table="union_salary" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="citi_id" not-null="true" />
+            </key>
+            <one-to-many class="entity.UnionSalary" />
+        </set>
+    </class>
+</hibernate-mapping>
